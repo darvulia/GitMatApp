@@ -62,29 +62,35 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Container(
-                    width: 10,
-                    height: 10,
-                    decoration: const BoxDecoration(
-                      color: AppColors.brandYellow,
-                      shape: BoxShape.circle,
+              Expanded(
+                child: Row(
+                  children: [
+                    Container(
+                      width: 10,
+                      height: 10,
+                      decoration: const BoxDecoration(
+                        color: AppColors.brandYellow,
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  const Text(
-                    'Simulador de Compra & Pesaje',
-                    style: TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w800,
-                      color: AppColors.brandDark,
+                    const SizedBox(width: 8),
+                    const Flexible(
+                      child: Text(
+                        'Simulador de Compra & Pesaje',
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.brandDark,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
+              const SizedBox(width: 6),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                 decoration: BoxDecoration(
                   color: AppColors.brandYellowLight.withValues(alpha: 0.5),
                   borderRadius: BorderRadius.circular(12),
@@ -126,7 +132,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                       const Text(
                         'MATERIAL & CALIDAD',
                         style: TextStyle(
-                          fontSize: 10,
+                          fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.brandMuted,
                           letterSpacing: 0.8,
@@ -140,7 +146,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                             underline: const SizedBox.shrink(),
                             icon: const Icon(Icons.keyboard_arrow_down, size: 18, color: AppColors.brandDark),
                             style: const TextStyle(
-                              fontSize: 13,
+                              fontSize: 15,
                               fontWeight: FontWeight.w700,
                               color: AppColors.brandDark,
                             ),
@@ -161,7 +167,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                             underline: const SizedBox.shrink(),
                             icon: const Icon(Icons.keyboard_arrow_down, size: 18, color: AppColors.brandDark),
                             style: const TextStyle(
-                              fontSize: 13,
+                              fontSize: 15,
                               fontWeight: FontWeight.w600,
                               color: AppColors.brandDark,
                             ),
@@ -203,7 +209,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                       const Text(
                         'PESO BRUTO (KG)',
                         style: TextStyle(
-                          fontSize: 9,
+                          fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.brandMuted,
                           letterSpacing: 0.6,
@@ -213,7 +219,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                         controller: _grossController,
                         keyboardType: const TextInputType.numberWithOptions(decimal: true),
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 18,
                           fontWeight: FontWeight.w800,
                           color: AppColors.brandDark,
                         ),
@@ -247,7 +253,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                       const Text(
                         'MERMA TIERRA (KG)',
                         style: TextStyle(
-                          fontSize: 9,
+                          fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.warning,
                           letterSpacing: 0.6,
@@ -257,7 +263,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                         controller: _dirtController,
                         keyboardType: const TextInputType.numberWithOptions(decimal: true),
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 18,
                           fontWeight: FontWeight.w800,
                           color: AppColors.warning,
                         ),
@@ -297,7 +303,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                       const Text(
                         'MATERIAL NETO',
                         style: TextStyle(
-                          fontSize: 9,
+                          fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.brandMuted,
                           letterSpacing: 0.6,
@@ -309,7 +315,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                           Text(
                             '${NumberFormatter.formatNumber(_netWeight)} kg',
                             style: const TextStyle(
-                              fontSize: 14,
+                              fontSize: 18,
                               fontWeight: FontWeight.w800,
                               color: AppColors.success,
                             ),
@@ -318,8 +324,8 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                           Text(
                             '(-${_wastePct.toStringAsFixed(1)}%)',
                             style: const TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.w600,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700,
                               color: AppColors.warning,
                             ),
                           ),
@@ -342,12 +348,10 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'TOTAL A PAGAR (@\$${_suggestedPrice.toStringAsFixed(0)}/KG)',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          fontSize: 9,
+                      const Text(
+                        'TOTAL A PAGAR',
+                        style: TextStyle(
+                          fontSize: 11,
                           fontWeight: FontWeight.w700,
                           color: AppColors.brandMuted,
                           letterSpacing: 0.6,
@@ -357,7 +361,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                       Text(
                         NumberFormatter.formatCurrency(_totalEstimated),
                         style: const TextStyle(
-                          fontSize: 14,
+                          fontSize: 20,
                           fontWeight: FontWeight.w900,
                           color: AppColors.brandDark,
                         ),
@@ -393,7 +397,7 @@ class _SimulateBookingCardState extends State<SimulateBookingCard> {
                   Text(
                     'REGISTRAR COMPRA FORMAL',
                     style: TextStyle(
-                      fontSize: 12,
+                      fontSize: 13,
                       fontWeight: FontWeight.w800,
                       color: Colors.white,
                       letterSpacing: 0.8,

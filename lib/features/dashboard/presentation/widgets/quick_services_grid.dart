@@ -89,17 +89,18 @@ class QuickServicesGrid extends StatelessWidget {
           ),
           const SizedBox(height: 6),
           SizedBox(
-            width: 72,
+            width: 78,
+            height: 32,
             child: Text(
               label,
               textAlign: TextAlign.center,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              maxLines: 2,
               style: const TextStyle(
-                fontSize: 11,
+                fontSize: 12,
                 fontWeight: FontWeight.w700,
                 color: AppColors.brandDark,
                 letterSpacing: -0.2,
+                height: 1.15,
               ),
             ),
           ),

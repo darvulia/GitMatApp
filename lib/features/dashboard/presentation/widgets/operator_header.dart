@@ -55,7 +55,7 @@ class OperatorHeader extends StatelessWidget {
                 Text(
                   'PATIO CENTRAL • 100% OFFLINE',
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 11,
                     fontWeight: FontWeight.w700,
                     color: AppColors.brandMuted,
                     letterSpacing: 0.8,
@@ -65,7 +65,7 @@ class OperatorHeader extends StatelessWidget {
                 Text(
                   'Control de Metales',
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 22,
                     fontWeight: FontWeight.w800,
                     color: AppColors.brandDark,
                     letterSpacing: -0.3,

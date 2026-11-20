@@ -117,7 +117,7 @@ class FloatingAmberBottomNav extends StatelessWidget {
             Text(
               label,
               style: TextStyle(
-                fontSize: 10,
+                fontSize: 11,
                 fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
                 color: color,
                 letterSpacing: -0.2,

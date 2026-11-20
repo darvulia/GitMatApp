@@ -37,7 +37,7 @@ class DashboardScreen extends ConsumerWidget {
           },
           child: SingleChildScrollView(
             physics: const AlwaysScrollableScrollPhysics(),
-            padding: const EdgeInsets.fromLTRB(20, 16, 20, 110),
+            padding: const EdgeInsets.fromLTRB(20, 16, 20, 130),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -131,7 +131,7 @@ class DashboardScreen extends ConsumerWidget {
         Text(
           label,
           style: const TextStyle(
-            fontSize: 9,
+            fontSize: 11,
             fontWeight: FontWeight.w700,
             color: AppColors.brandMuted,
             letterSpacing: 0.5,
@@ -141,7 +141,7 @@ class DashboardScreen extends ConsumerWidget {
         Text(
           value,
           style: TextStyle(
-            fontSize: 13,
+            fontSize: 16,
             fontWeight: FontWeight.w800,
             color: color,
           ),
@@ -179,7 +179,7 @@ class DashboardScreen extends ConsumerWidget {
               const Text(
                 'Catálogo de Precios Sugeridos / Kg',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 18,
                   fontWeight: FontWeight.w800,
                   color: AppColors.brandDark,
                 ),
@@ -187,7 +187,7 @@ class DashboardScreen extends ConsumerWidget {
               const SizedBox(height: 4),
               const Text(
                 'Precios base actualizados para compra en patio',
-                style: TextStyle(fontSize: 12, color: AppColors.brandMuted),
+                style: TextStyle(fontSize: 13, color: AppColors.brandMuted),
               ),
               const SizedBox(height: 16),
               _buildPriceRow(MetalType.cobre, '\$150.00 / kg', '\$130.00 / kg', AppColors.colorCobre),
@@ -219,15 +219,15 @@ class DashboardScreen extends ConsumerWidget {
               const SizedBox(width: 10),
               Text(
                 mat.displayName,
-                style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.brandDark),
+                style: const TextStyle(fontSize: 15, fontWeight: FontWeight.w800, color: AppColors.brandDark),
               ),
             ],
           ),
           Row(
             children: [
-              Text('1ra: $firstGrade', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: AppColors.brandDark)),
+              Text('1ra: $firstGrade', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w700, color: AppColors.brandDark)),
               const SizedBox(width: 12),
-              Text('2da: $secondGrade', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: AppColors.brandMuted)),
+              Text('2da: $secondGrade', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: AppColors.brandMuted)),
             ],
           ),
         ],
@@ -265,16 +265,16 @@ class DashboardScreen extends ConsumerWidget {
               const SizedBox(height: 16),
               const Text(
                 'Resumen de Turno • Patio Central',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: AppColors.brandDark),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: AppColors.brandDark),
               ),
               const SizedBox(height: 14),
-              Text('• Lotes procesados: $count', style: const TextStyle(fontSize: 13, color: AppColors.brandDark)),
+              Text('• Lotes procesados: $count', style: const TextStyle(fontSize: 14, color: AppColors.brandDark)),
               const SizedBox(height: 6),
-              Text('• Material neto recibido: ${NumberFormatter.formatNumber(totalNet)} kg', style: const TextStyle(fontSize: 13, color: AppColors.brandDark)),
+              Text('• Material neto recibido: ${NumberFormatter.formatNumber(totalNet)} kg', style: const TextStyle(fontSize: 14, color: AppColors.brandDark)),
               const SizedBox(height: 6),
-              Text('• Tierra descontada (merma): ${NumberFormatter.formatNumber(totalWaste)} kg', style: const TextStyle(fontSize: 13, color: AppColors.warning)),
+              Text('• Tierra descontada (merma): ${NumberFormatter.formatNumber(totalWaste)} kg', style: const TextStyle(fontSize: 14, color: AppColors.warning)),
               const SizedBox(height: 6),
-              Text('• Total pagado a proveedores: ${NumberFormatter.formatCurrency(totalSpent)}', style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.brandDark)),
+              Text('• Total pagado a proveedores: ${NumberFormatter.formatCurrency(totalSpent)}', style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: AppColors.brandDark)),
             ],
           ),
         );

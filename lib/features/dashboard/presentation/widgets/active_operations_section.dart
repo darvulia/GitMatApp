@@ -42,7 +42,7 @@ class ActiveOperationsSection extends StatelessWidget {
             const Text(
               'Lotes y Compras Recientes',
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 18,
                 fontWeight: FontWeight.w800,
                 color: AppColors.brandDark,
                 letterSpacing: -0.2,
@@ -53,7 +53,7 @@ class ActiveOperationsSection extends StatelessWidget {
               child: Text(
                 'Ver todas (${purchases.length})',
                 style: const TextStyle(
-                  fontSize: 12,
+                  fontSize: 13,
                   fontWeight: FontWeight.w700,
                   color: AppColors.brandYellowDeep,
                 ),
@@ -123,7 +123,7 @@ class ActiveOperationsSection extends StatelessWidget {
                       Text(
                         '${item.materialType.displayName} • ${item.quality.displayName}',
                         style: const TextStyle(
-                          fontSize: 13,
+                          fontSize: 16,
                           fontWeight: FontWeight.w800,
                           color: AppColors.brandDark,
                         ),
@@ -131,7 +131,7 @@ class ActiveOperationsSection extends StatelessWidget {
                       Text(
                         DateFormatter.formatDateTime(item.purchaseDate),
                         style: const TextStyle(
-                          fontSize: 10,
+                          fontSize: 12,
                           fontWeight: FontWeight.w500,
                           color: AppColors.brandMuted,
                         ),
@@ -149,7 +149,7 @@ class ActiveOperationsSection extends StatelessWidget {
                 child: const Text(
                   'EN PATIO',
                   style: TextStyle(
-                    fontSize: 9,
+                    fontSize: 11,
                     fontWeight: FontWeight.w800,
                     color: AppColors.brandYellowDeep,
                     letterSpacing: 0.5,
@@ -246,7 +246,7 @@ class ActiveOperationsSection extends StatelessWidget {
                   Text(
                     item.supplierName ?? 'Proveedor de Patio',
                     style: const TextStyle(
-                      fontSize: 12,
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: AppColors.brandDark,
                     ),
@@ -264,8 +264,8 @@ class ActiveOperationsSection extends StatelessWidget {
                     child: Text(
                       NumberFormatter.formatCurrency(item.totalCost),
                       style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w800,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w900,
                         color: AppColors.brandYellowDeep,
                       ),
                     ),
@@ -327,7 +327,7 @@ class ActiveOperationsSection extends StatelessWidget {
         Text(
           label.toUpperCase(),
           style: TextStyle(
-            fontSize: 9,
+            fontSize: 11,
             fontWeight: FontWeight.w700,
             color: isWarning
                 ? AppColors.warning
@@ -338,7 +338,7 @@ class ActiveOperationsSection extends StatelessWidget {
         Text(
           value,
           style: TextStyle(
-            fontSize: 11,
+            fontSize: 14,
             fontWeight: FontWeight.w800,
             color: isWarning
                 ? AppColors.warning
@@ -386,7 +386,7 @@ class ActiveOperationsSection extends StatelessWidget {
                   Text(
                     '${item.materialType.displayName} • ${item.quality.displayName}',
                     style: const TextStyle(
-                      fontSize: 13,
+                      fontSize: 16,
                       fontWeight: FontWeight.w800,
                       color: AppColors.brandDark,
                     ),
@@ -395,8 +395,8 @@ class ActiveOperationsSection extends StatelessWidget {
                   Text(
                     '${NumberFormatter.formatNumber(item.netQuantity)} kg neto • ${NumberFormatter.formatCurrency(item.totalCost)}',
                     style: const TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
                       color: AppColors.brandMuted,
                     ),
                   ),
@@ -454,7 +454,7 @@ class ActiveOperationsSection extends StatelessWidget {
           const Text(
             'Sin compras registradas aún',
             style: TextStyle(
-              fontSize: 14,
+              fontSize: 16,
               fontWeight: FontWeight.w800,
               color: AppColors.brandDark,
             ),
@@ -464,7 +464,7 @@ class ActiveOperationsSection extends StatelessWidget {
             'Usa el simulador superior o el botón "+" para registrar material',
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 12,
+              fontSize: 13,
               fontWeight: FontWeight.w500,
               color: AppColors.brandMuted,
             ),
