@@ -1,0 +1,111 @@
+# ==============================================================================
+# MatApp — Flutter Production .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Flutter / Dart
+# ------------------------------------------------------------------------------
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+build/
+coverage/
+**/doc/api/
+.packages
+
+# Symbolication and Obfuscation
+app.*.symbols
+app.*.map.json
+
+# Widget Preview
+.widget_preview/
+
+# ------------------------------------------------------------------------------
+# Android
+# ------------------------------------------------------------------------------
+**/android/.gradle/
+**/android/captures/
+**/android/gradleBuild/
+**/android/app/build/
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+android/local.properties
+android/.externalNativeBuild/
+android/.cxx/
+
+# Keystores & Release Signing
+*.jks
+*.keystore
+**/android/key.properties
+
+# ------------------------------------------------------------------------------
+# iOS & macOS
+# ------------------------------------------------------------------------------
+**/ios/Flutter/.last_build_id
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.framework
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/profile/
+**/ios/release/
+**/ios/DerivedData/
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# ------------------------------------------------------------------------------
+# Desktop (Windows / Linux)
+# ------------------------------------------------------------------------------
+windows/flutter/ephemeral/
+linux/flutter/ephemeral/
+*.exe
+*.dll
+*.obj
+
+# ------------------------------------------------------------------------------
+# IDEs and Editors
+# ------------------------------------------------------------------------------
+# IntelliJ / Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Visual Studio Code
+.vscode/
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# ------------------------------------------------------------------------------
+# Environment, Database & Temp files
+# ------------------------------------------------------------------------------
+.env
+.env.*
+*.local
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# Local SQLite databases created during testing
+*.sqlite-journal
+*.db-journal
+
+# ------------------------------------------------------------------------------
+# OS-generated files
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini

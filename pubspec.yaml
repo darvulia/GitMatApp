@@ -1,0 +1,49 @@
+name: matapp
+description: "Aplicación de registro de compras de materiales metálicos (acero, bronce, cobre, aluminio). Offline-first."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.14.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Base de datos local offline (SQLite ORM) ──────────────────────────────
+  drift: ^2.21.0
+  sqlite3_flutter_libs: ^0.5.24
+  path_provider: ^2.1.4
+  path: ^1.9.0
+
+  # ── Gestión de estado ─────────────────────────────────────────────────────
+  flutter_riverpod: ^2.5.3
+
+  # ── Preferencias locales ──────────────────────────────────────────────────
+  shared_preferences: ^2.3.2
+
+  # ── UI y tipografía ───────────────────────────────────────────────────────
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+  intl: ^0.19.0
+
+  # ── Gráficas para reportes ────────────────────────────────────────────────
+  fl_chart: ^0.69.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # ── Generación de código (Drift) ──────────────────────────────────────────
+  build_runner: ^2.4.12
+  drift_dev: ^2.21.0
+
+  # ── Testing ───────────────────────────────────────────────────────────────
+  mocktail: ^1.0.4
+
+  # ── Linting ───────────────────────────────────────────────────────────────
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
